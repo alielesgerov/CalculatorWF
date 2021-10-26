@@ -45,6 +45,7 @@ namespace Calculator1WF
                 input = input.Replace(" ", "");
                 this.calculationResultLbl.Text = input;
                 input = input.Replace("x", "*");
+                input = input.Replace("%", "/100");
                 var result = new DataTable().Compute(input, null);
                 if (Double.IsInfinity(Convert.ToDouble(result)))
                 {
